@@ -15,6 +15,12 @@ jobs:
         with: 
           java-version: '11'
           distribution: 'adopt'
+      - name: Cache Gradle packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
       - name: Publish package
         run: gradle publish
         env:

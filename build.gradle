@@ -59,7 +59,7 @@ publishing {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/mjohnki/apod-lib"
             credentials {
-                System.getenv("MAVEN_USERNAME")
+                username = System.getenv("MAVEN_USERNAME")
                 password = System.getenv("MAVEN_PASSWORD")
             }
         }

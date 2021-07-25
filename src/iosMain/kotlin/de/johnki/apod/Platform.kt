@@ -1,4 +1,4 @@
-package me.martinjohnki.library
+package de.johnki.apod
 
 
 import platform.UIKit.UIDevice

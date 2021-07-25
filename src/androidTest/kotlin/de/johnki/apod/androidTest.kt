@@ -1,4 +1,4 @@
-package me.martinjohnki.library
+package de.johnki.apod
 
 import org.junit.Assert.assertTrue
 import org.junit.Test

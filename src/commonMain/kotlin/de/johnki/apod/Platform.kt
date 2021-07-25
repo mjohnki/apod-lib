@@ -1,4 +1,4 @@
-package me.martinjohnki.library
+package de.johnki.apod
 
 expect class Platform() {
     val platform: String

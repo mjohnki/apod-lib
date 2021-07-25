@@ -25,13 +25,12 @@ jobs:
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
-      - name: Set version
-        run: |
-          chmod u+x ./.github/showVersion.sh
-          echo '::set-output name=VERSION::$(./github/showVerison.sh)'
-        id: random-color-generator
-      - name: Get Version
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.VERSION }}"
+      - name: Remive SNAPSHOT versions
+        uses: WPMedia/delete-github-package-versions@v0.4.10
+        with:
+          version-pattern: "^\\d+\\.\\d+\\.\\d+-SNAPSHOT\\d+$"
+          names: |
+            apod-lib
       - name: Publish package
         run: gradle publish
         env:

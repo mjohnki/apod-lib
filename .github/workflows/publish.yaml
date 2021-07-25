@@ -25,6 +25,12 @@ jobs:
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
+      - name: Set version
+        run:
+          echo '::set-output name=VERSION::$(./gradlew properties  | grep version: | sed "s/version: //g")'
+        id: random-color-generator
+      - name: Get Version
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.VERSION }}"
       - name: Publish package
         run: gradle publish
         env:

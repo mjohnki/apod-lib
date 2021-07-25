@@ -5,8 +5,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'de.johnki.apod.shared'
-version = '1.1-SNAPSHOT'
+group = 'de.johnki.apod'
+version = '1.0-SNAPSHOT'
 
 repositories {
     google()
@@ -34,14 +34,10 @@ kotlin {
             }
         }
         androidMain {
-            dependencies {
-                implementation 'com.google.android.material:material:1.2.1'
-            }
+
         }
         androidTest {
-            dependencies {
-                implementation 'junit:junit:4.13'
-            }
+
         }
         iosMain {
 

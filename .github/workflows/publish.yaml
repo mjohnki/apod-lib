@@ -20,7 +20,6 @@ jobs:
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-caches-${{ hashFiles('**/*.gradle', '**/*.gradle.kts') }}
-
       - name: Setup Gradle Wrapper Cache
         uses: actions/cache@v2
         with:

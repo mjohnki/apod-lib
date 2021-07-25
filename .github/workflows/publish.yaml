@@ -29,7 +29,7 @@ jobs:
         uses: smartsquaregmbh/delete-old-packages@v0.3.1
         with:
           names: |
-            apod-lib
+            de.johnki.apod.apod-lib
       - name: Publish package
         run: gradle publish
         env:

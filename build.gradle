@@ -6,11 +6,10 @@ plugins {
 }
 
 group = 'de.johnki.apod.shared'
-version = '1.0'
+version = '1.0-SNAPSHOT'
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
 }
 

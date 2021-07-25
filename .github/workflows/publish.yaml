@@ -28,7 +28,6 @@ jobs:
       - name: Remive SNAPSHOT versions
         uses: WPMedia/delete-github-package-versions@v0.4.10
         with:
-          version-pattern: "^\\d+\\.\\d+\\.\\d+-SNAPSHOT$"
           names: |
             apod-lib
       - name: Publish package

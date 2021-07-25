@@ -29,7 +29,8 @@ jobs:
         uses: smartsquaregmbh/delete-old-packages@v0.3.1
         with:
           user: mjohnki
-          keep: 0
+          keep: 0 #Delete all packages
+          version-pattern: "^\\d+\\.\\d+\\.\\d+-SNAPSHOT$"
           names: |
             de.johnki.apod.apod-lib-android-debug
             de.johnki.apod.apod-lib

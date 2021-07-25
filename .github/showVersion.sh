@@ -1,0 +1,1 @@
+./gradlew properties  | grep version: | sed "s/version: //g"

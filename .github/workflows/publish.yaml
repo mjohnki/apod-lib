@@ -28,8 +28,11 @@ jobs:
       - name: Remive SNAPSHOT versions
         uses: smartsquaregmbh/delete-old-packages@v0.3.1
         with:
+          user: mjohnki
           names: |
+            de.johnki.apod.apod-lib-android-debug
             de.johnki.apod.apod-lib
+            de.johnki.apod.apod-lib-android
       - name: Publish package
         run: gradle publish
         env:
